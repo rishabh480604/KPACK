@@ -57,7 +57,7 @@ function Slider() {
     };
 
     function prevSlide() {
-        console.log("prev slide");
+        console.log({images});[currentIndex]
         
         setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
     };
