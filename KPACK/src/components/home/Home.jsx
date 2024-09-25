@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import backgroundImage from '/workspaces/KPACK/KPACK/src/components/home/wall.jpg'
+// import backgroundImage from '/workspaces/KPACK/KPACK/src/components/home/wall.jpg'
 import Slider from './Slider';
 function Home() {
   

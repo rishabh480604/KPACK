@@ -1,53 +1,59 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react';
 
+// import img1 from "/workspaces/KPACK/KPACK/src/components/home/WB09png";
+// import img2 from "/workspaces/KPACK/KPACK/src/components/home/WB10png";
+// import img3 from "/workspaces/KPACK/KPACK/src/components/home/WB11png";
+// import img4 from "/workspaces/KPACK/KPACK/src/components/home/WB12png";
+
 function Slider() {
     const [currentIndex, setCurrentIndex] = useState(1);
 
     const images = [
-        "https://desagri.gov.in/wp-content/uploads/2021/05/WB08.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB09.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB10.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB11.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB12.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB13.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB14.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB15.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/10/Azadi-K-Amrit.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB01.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB02.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB03.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB04.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB05.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB06.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB07.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB08.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB09.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB10.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB11.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB12.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB13.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB14.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB15.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/10/Azadi-K-Amrit.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB01.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB02.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB03.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB04.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB05.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB06.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/05/WB07.png",
-    "https://desagri.gov.in/wp-content/uploads/2021/03/india_gov.jpg",
-    "https://desagri.gov.in/wp-content/uploads/2021/03/my_gov.jpg",
-    "https://desagri.gov.in/wp-content/uploads/2021/03/digital_india.jpg",
-    "https://desagri.gov.in/wp-content/uploads/2021/03/data_gov_in.jpg",
-    "https://desagri.gov.in/wp-content/uploads/2021/03/make_in_india.jpg",
-    "https://desagri.gov.in/wp-content/uploads/2021/03/india_gov.jpg",
-    "https://desagri.gov.in/wp-content/uploads/2021/03/my_gov.jpg",
-    "https://desagri.gov.in/wp-content/uploads/2021/03/digital_india.jpg",
-    "https://desagri.gov.in/wp-content/uploads/2021/03/data_gov_in.jpg",
-    "https://desagri.gov.in/wp-content/uploads/2021/03/make_in_india.jpg",
-    "https://desagri.gov.in/wp-content/uploads/2021/03/india_gov.jpg"
+    //     "https://desagri.gov.in/wp-content/uploads/2021/05/WB08.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB09.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB10.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB11.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB12.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB13.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB14.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB15.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/10/Azadi-K-Amrit.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB01.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB02.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB03.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB04.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB05.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB06.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB07.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB08.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB09.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB10.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB11.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB12.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB13.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB14.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB15.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/10/Azadi-K-Amrit.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB01.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB02.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB03.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB04.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB05.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB06.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/05/WB07.png",
+    // "https://desagri.gov.in/wp-content/uploads/2021/03/india_gov.jpg",
+    // "https://desagri.gov.in/wp-content/uploads/2021/03/my_gov.jpg",
+    // "https://desagri.gov.in/wp-content/uploads/2021/03/digital_india.jpg",
+    // "https://desagri.gov.in/wp-content/uploads/2021/03/data_gov_in.jpg",
+    // "https://desagri.gov.in/wp-content/uploads/2021/03/make_in_india.jpg",
+    // "https://desagri.gov.in/wp-content/uploads/2021/03/india_gov.jpg",
+    // "https://desagri.gov.in/wp-content/uploads/2021/03/my_gov.jpg",
+    // "https://desagri.gov.in/wp-content/uploads/2021/03/digital_india.jpg",
+    // "https://desagri.gov.in/wp-content/uploads/2021/03/data_gov_in.jpg",
+    // "https://desagri.gov.in/wp-content/uploads/2021/03/make_in_india.jpg",
+    // "https://desagri.gov.in/wp-content/uploads/2021/03/india_gov.jpg"
+        "/src/components/home/WB09.png"
     ];
 
     function nextSlide() {
@@ -57,7 +63,7 @@ function Slider() {
     };
 
     function prevSlide() {
-        console.log({images});[currentIndex]
+        console.log("prev slide");
         
         setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
     };
@@ -65,8 +71,8 @@ function Slider() {
       const id=setInterval(() => {
         setCurrentIndex(currentIndex+1);
       }, 5000);
-      console.log("image move ahead");
-      ()=>clearInterval(id);
+      console.log(images[currentIndex]);
+      return ()=>clearInterval(id);
     }, [currentIndex])
     
   return (
