@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <footer className="bg-transarent text-black flex flex-col items-center justify-center h-full p-4 ">
+    <footer className="bg-transarent text-black flex flex-col items-center justify-center h-full  ">
     <div className="flex space-x-4 mb-2">
         <a href="/about" className="hover:underline">About Us</a>
         <a href="/contact" className="hover:underline">Contact Us</a>

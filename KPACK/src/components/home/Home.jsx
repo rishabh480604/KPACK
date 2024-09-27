@@ -6,8 +6,9 @@ function Home() {
   return (
     
     <>
-    <Slider className=" my-4"/>
-    <div className="absolute inset-0 flex items-center justify-center" 
+    <Slider />
+
+    {/* <div className="absolute inset-0 flex items-center justify-center" 
             // style={{ 
             //     backgroundImage: `url(${backgroundImage})`, // Set background image
             //     backgroundSize: 'cover', // Cover the entire area
@@ -16,7 +17,9 @@ function Home() {
             // }}
             >
 
-            </div>
+            </div> */}
+            
+
     </>
   )
 }
